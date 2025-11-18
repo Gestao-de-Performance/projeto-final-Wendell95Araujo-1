@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página não encontrada" data-i18n-key="errorPageSubtitle">
+    <meta name="author" content="Wendell Araújo">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#13161d">
+    <title data-i18n-key="errorPageDocTitle">Erro 404 - Página Não Encontrada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/lib/fontawesome-free-7.1.0-web/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/img/logo-maskable.webp" type="image/x-icon">
+    <script src="/assets/js/particles.min.js"></script>
+</head>
+<body>
+    <header id="header" class="panel">
+        <a href="/" title="Ir para a página inicial" class="logo-header" aria-label="Ir para a página inicial">
+            <img class="logoPrincipal" src="assets/img/logo.webp" alt="Logo Wendell Araújo" height="30px">
+        </a>
+
+        <div class="header-controls">
+            <nav class="menu" id="menu" aria-label="Menu de navegação">
+                <a href="/#about" data-i18n-key="navAbout">Sobre Mim</a>
+                <a href="/#contact" data-i18n-key="navContact">Contato</a>
+                <a href="/#skills" data-i18n-key="navSkills">Habilidades</a>
+                <a href="/#projects" data-i18n-key="navProjects">Projetos</a>
+            </nav>
+
+            <div class="language-dropdown">
+                <button id="language-selector-button" aria-label="Selecionar idioma">
+                    <img id="selected-lang-flag" src="https://flagcdn.com/w40/br.png" alt="Bandeira do idioma selecionado">
+                </button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#" data-lang="pt-BR">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil">
+                        <span data-i18n-key="langPortuguese">Português</span>
+                    </a>
+                    <a href="#" data-lang="en">
+                        <img src="https://flagcdn.com/w40/us.png" alt="Bandeira dos Estados Unidos">
+                        <span data-i18n-key="langEnglish">English</span>
+                    </a>
+                    <a href="#" data-lang="es">
+                        <img src="https://flagcdn.com/w40/es.png" alt="Bandeira da Espanha">
+                        <span data-i18n-key="langSpanish">Español</span>
+                    </a>
+                </div>
+            </div>
+
+            <button id="theme-toggle" aria-label="Alterar tema">
+                <i class="fas fa-sun" title="Alterar para tema escuro"></i>
+                <i class="fas fa-moon" title="Alterar para tema claro"></i>
+            </button>           
+
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </div>
+    </header>
+
+    <div id="particles-js"></div>
+
+    <main class="main-error-page">
+        <section id="error-page" class="panel">
+            <div class="error-container">
+                <h1 class="error-title">404</h1>
+                <p class="error-subtitle" data-i18n-key="errorPageSubtitle">Página Não Encontrada</p>
+                <p class="error-message" data-i18n-key="errorPageMessage">Desculpe, a página que você está procurando não existe ou foi movida.</p>
+                <a href="/" class="button" data-i18n-key="errorPageButton">Voltar para a Página Inicial</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="containerLogoFooter">
+            <img class="logoFooter" src="/assets/img/logo-full.webp" alt="Logo principal do site">
+        </div>
+        <div class="contact-footer">
+            <div class="contact-info">
+                <h2 data-i18n-key="navContact">Contato</h2>
+                <p data-i18n-key="contactEmail">Email: <a class="email-link" href="mailto:wendellaraujodev@gmail.com">wendellaraujodev@gmail.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon github" aria-label="Visitar perfil de Wendell Araújo no GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon linkedin" aria-label="Visitar perfil de Wendell Araújo no LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/wendellaraujodev/" target="_blank" class="social-icon instagram" aria-label="Visitar perfil de Wendell Araújo no Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>             
+            </div>
+        </div>
+      </footer>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+</body>
+</html>
