@@ -30,6 +30,9 @@
   --border-radius-panel: 10px;
   --border-radius-pill: 50px;
   scroll-padding-top: 100px;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 /*========================================================
@@ -47,7 +50,7 @@ html {
 
 body,
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   color: var(--tertiary-color);
   background-color: var(--primary-color);
   background-image: radial-gradient(
@@ -65,6 +68,21 @@ body.showModal {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.invisible-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 /*========================================================
   LOADING SCREEN
 =========================================================*/
@@ -79,12 +97,8 @@ body.showModal {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-}
-
-#loader.loader-hidden {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  transition: none;
 }
 
 .loader-content {
@@ -211,6 +225,7 @@ body.showModal {
 }
 
 #menu a {
+  font-family: var(--font-heading);
   font-size: 1rem;
 }
 
@@ -227,6 +242,8 @@ body.showModal {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -250,10 +267,10 @@ body.showModal {
 
 #language-selector-button {
   background: transparent;
-  border: none; /* ALTERAÇÃO: Removida a borda do botão principal */
+  border: none;
   border-radius: 50%;
   cursor: pointer;
-  padding: 2px; /* Adicionado padding para área de clique */
+  padding: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,6 +286,7 @@ body.showModal {
 
 .dropdown-content {
   display: none;
+  opacity: 0;
   position: absolute;
   right: 0;
   top: calc(100% + 15px);
@@ -278,6 +296,7 @@ body.showModal {
   border-radius: 4px;
   z-index: 100;
   overflow: hidden;
+  transform-origin: top right;
 }
 
 .dropdown-content.show {
@@ -291,7 +310,9 @@ body.showModal {
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+  opacity: 0;
+  transform: translateX(20px);
 }
 
 .dropdown-content img {
@@ -437,6 +458,7 @@ main {
   width: 120px;
   text-align: center;
   transition: var(--transition-speed);
+  opacity: 0;
 }
 
 .skill-item i {
@@ -445,6 +467,7 @@ main {
 }
 
 .skill-item span {
+  font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -504,6 +527,7 @@ main {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: var(--transition-speed);
+  opacity: 0;
 }
 
 .project-image-container {
@@ -645,14 +669,10 @@ main {
   background-color: var(--background-overlay);
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
 }
 
 .modal.show {
-  visibility: visible;
-  opacity: 1;
   display: flex;
 }
 
@@ -665,9 +685,11 @@ main {
   max-width: 500px;
   text-align: center;
   position: relative;
-  overflow: scroll;
+  margin: auto;
+  overflow-y: auto;
   max-height: 90vh;
 }
+
 .modal-content img {
   width: 100%;
   height: auto;
@@ -695,7 +717,7 @@ main {
   justify-content: center;
   top: 0;
   right: 0;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: var(--text-dark);
   background-color: transparent;
   padding: 0;
@@ -872,9 +894,24 @@ footer {
 /*========================================================
   UTILITIES
 =========================================================*/
-::-webkit-scrollbar {
-  display: none;
+*::-webkit-scrollbar {
+  width: 8px;
 }
+
+*::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gradient-color-end);
+}
+
 
 /*========================================================
 ESTILOS DO MODO CLARO 
@@ -1017,7 +1054,7 @@ body.light-mode .error-container .button {
 
   #theme-toggle:hover {
     color: var(--secondary-color);
-    transform: scale(1.1) rotate(15deg);
+    transform: scale(1.1);
   }
 
   body.light-mode #theme-toggle:hover {
@@ -1107,6 +1144,18 @@ body.light-mode .error-container .button {
 /*========================================================
   MEDIA QUERIES
 =========================================================*/
+/*========== Screens larger than 577px ==========*/
+@media screen and (min-width: 577px) {
+  #menu a {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  #menu {
+    display: flex !important;
+  }
+}
 
 /*========== Screens up to 900px ==========*/
 @media screen and (max-width: 900px) {
@@ -1210,7 +1259,7 @@ body.light-mode .error-container .button {
     width: 160px;
     flex-direction: column;
     gap: 10px;
-    transition: var(--transition-speed);
+    transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     background-color: var(--primary-color);
     border-radius: 4px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -1225,6 +1274,14 @@ body.light-mode .error-container .button {
     background-color: var(--primary-color);
     border-radius: 4px;
     margin: 0 !important;
+    transition: none !important;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  #menu:not(.active) a {
+    opacity: 0;
+    transform: translateX(50px);
   }
 
   #menu a:hover {

@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de projetos de Wendell Araújo, Desenvolvedor Full Stack." data-i18n-key="metaDescription">
-    <meta name="author" content="Wendell Araújo">
-    <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, C#, Projetos, Portfólio">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#13161d">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Projetos | Portfólio de Wendell Araújo">
-    <meta property="og:description" content="Explore a galeria completa de projetos de Wendell Araújo, Desenvolvedor Full Stack.">
-    <meta property="og:url" content="https://wendell-araujo.web.app/projects.html">
-    <meta property="og:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Projetos | Portfólio de Wendell Araújo">
-    <meta name="twitter:description" content="Explore a galeria completa de projetos de Wendell Araújo.">
-    <meta name="twitter:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">
-    <link rel="shortcut icon" href="assets/img/logo-maskable.webp" type="image/x-icon">
-    <title data-i18n-key="projectsPageDocTitle">Projetos | Wendell Araújo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="lib/fontawesome-free-7.1.0-web/css/all.min.css">
-    <script src="assets/js/particles.min.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD67JK2GRV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XD67JK2GRV');
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfólio de projetos de Wendell Araújo, Desenvolvedor Full Stack." data-i18n-key="projectsMetaDescription" data-i18n-attr="content">
+        
+        <meta name="author" content="Wendell Araújo">
+        <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, C#, Projetos, Portfólio">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#000714">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Projetos | Portfólio de Wendell Araújo" data-i18n-key="projectsSocialTitle" data-i18n-attr="content">
+        <meta property="og:description" content="Explore a galeria completa de projetos de Wendell Araújo, Desenvolvedor Full Stack." data-i18n-key="projectsSocialDescription" data-i18n-attr="content">
+        <meta property="og:url" content="https://wendell-araujo.web.app/projects.html">
+        <meta property="og:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Projetos | Portfólio de Wendell Araújo" data-i18n-key="projectsSocialTitle" data-i18n-attr="content">
+        <meta name="twitter:description" content="Explore a galeria completa de projetos de Wendell Araújo." data-i18n-key="projectsSocialDescription" data-i18n-attr="content">
+        <meta name="twitter:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">        
+        <link rel="shortcut icon" href="assets/img/logo-maskable.webp" type="image/x-icon">
+        <title data-i18n-key="projectsPageDocTitle">Projetos | Wendell Araújo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="lib/fontawesome-free-7.1.0-web/css/all.min.css">
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+        <script src="assets/js/firebase-config.js"></script>
+        <script src="assets/js/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD67JK2GRV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XD67JK2GRV');
+        </script>
+    </head>
 <body>
     <div id="loader">
         <div class="loader-content">
@@ -87,18 +92,18 @@
 
     <main>
         <section id="projects" class="panel projects">
-            <div class="projects-title">
+            <div class="projects-title invisible-init">
                 <h2 data-i18n-key="projectsPageTitle">Meus Projetos</h2>
                 <p data-i18n-key="projectsPageText">Aqui você encontra uma lista com a maioria dos meus trabalhos.</p>
             </div>
         
-            <div class="project-showcase-container"></div>
+            <div class="project-showcase-container invisible-init"></div>
             
         </section>
     
         <div id="projectModal" class="modal">
             <div class="modal-content">
-                <button class="close" onclick="closeModal()"><i class="fas fa-square-xmark"></i></button>
+                <button class="close" onclick="closeModal()"><i class="fas fa-xmark"></i></button>
                 
                 <div class="modal-gallery-container">
                     <div class="gallery-loader">

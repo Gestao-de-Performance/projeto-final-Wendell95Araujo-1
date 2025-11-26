@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" data-i18n-key="metaDescription">
+    <meta name="description" content="Portfólio de Wendell Araújo, Desenvolvedor Full Stack com experiência em projetos web modernos." data-i18n-key="metaDescription" data-i18n-attr="content">
     <meta name="author" content="Wendell Araújo">
     <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, C#, Portfólio, Desenvolvedor, Full Stack">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#13161d">
+    <meta name="theme-color" content="#000714">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Wendell Araújo | Desenvolvedor Full Stack">
-    <meta property="og:description" content="Desenvolvedor Full Stack com experiência em projetos web modernos. Veja meus projetos e habilidades.">
+    <meta property="og:title" content="Wendell Araújo | Desenvolvedor Full Stack" data-i18n-key="socialTitle" data-i18n-attr="content">
+    <meta property="og:description" content="Desenvolvedor Full Stack com experiência em projetos web modernos. Veja meus projetos e habilidades." data-i18n-key="socialDescription" data-i18n-attr="content">
     <meta property="og:url" content="https://wendell-araujo.web.app/">
     <meta property="og:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wendell Araújo | Desenvolvedor Full Stack">
-    <meta name="twitter:description" content="Desenvolvedor Full Stack apaixonado por tecnologia e inovação.">
+    <meta name="twitter:title" content="Wendell Araújo | Desenvolvedor Full Stack" data-i18n-key="socialTitle" data-i18n-attr="content">
+    <meta name="twitter:description" content="Desenvolvedor Full Stack apaixonado por tecnologia e inovação." data-i18n-key="twitterDescription" data-i18n-attr="content">
     <meta name="twitter:image" content="https://wendell-araujo.web.app/assets/img/og-image.jpg">
     <link rel="shortcut icon" href="assets/img/logo-maskable.webp" type="image/x-icon">
     <title data-i18n-key="docTitle">Wendell Araújo | Desenvolvedor Full Stack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="lib/fontawesome-free-7.1.0-web/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
     <script src="assets/js/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD67JK2GRV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -88,41 +92,41 @@
     
     <main>
         <section id="about" class="panel about">
-            <h2 data-i18n-key="aboutTitle">Sobre Mim</h2>
+            <h2 data-i18n-key="aboutTitle" class="invisible-init">Sobre Mim</h2>
             <div class="about-content">
               <div class="apresentacao-container">
-                <div class="profile-photo-container">
+                <div class="profile-photo-container invisible-init">
                   <img width="200px" src="assets/img/wendell.webp" alt="Foto de perfil de Wendell Araújo, sorrindo e vestindo uma camisa jeans." class="profile-photo">
                 </div>
-                <p data-i18n-key="aboutGreeting">Olá! Meu nome é <strong>Wendell Araújo</strong>, sou um <strong>Desenvolvedor Full Stack</strong> apaixonado por tecnologia, design e inovação.</p>
+                <p data-i18n-key="aboutGreeting" class="invisible-init">Olá! Meu nome é <strong>Wendell Araújo</strong>, sou um <strong>Desenvolvedor Full Stack</strong> apaixonado por tecnologia, design e inovação.</p>
               </div>
           
-              <div class="about-text-container">
-                <p data-i18n-key="aboutMission">Ajudo empresas e profissionais a transformarem ideias em <strong>soluções digitais modernas, rápidas e eficientes</strong>.</p>
+              <div class="about-text-container invisible-init">
+                <p data-i18n-key="aboutMission" class="invisible-init">Ajudo empresas e profissionais a transformarem ideias em <strong>soluções digitais modernas, rápidas e eficientes</strong>.</p>
             
-                <p data-i18n-key="aboutSpecialties">Minhas especialidades incluem:</p>
-                <ul>
+                <p data-i18n-key="aboutSpecialties" class="invisible-init">Minhas especialidades incluem:</p>
+                <ul class="invisible-init">
                   <li data-i18n-key="specialtyFrontend"><strong>Desenvolvimento front-end</strong> com <strong>Angular</strong> e <strong>Lit</strong>, criando interfaces modernas, acessíveis e responsivas;</li>
                   <li data-i18n-key="specialtyBackend"><strong>Desenvolvimento back-end</strong> com <strong>.NET (C#)</strong> e <strong>MySQL</strong>, garantindo sistemas estáveis e escaláveis;</li>
                   <li data-i18n-key="specialtyIntegration"><strong>Integração de APIs e bancos de dados</strong>, conectando serviços e funcionalidades de forma segura e performática;</li>
                   <li data-i18n-key="specialtyDesignSystems"><strong>Criação e manutenção de Design Systems</strong>, com foco em padronização, reutilização de componentes e consistência visual.</li>
                 </ul>
           
-                <p data-i18n-key="aboutEducation">Sou graduando em <strong>Gestão de Tecnologia da Informação</strong> pela Faculdade Uníntese e estou sempre me aperfeiçoando em <strong>UI/UX</strong>, boas práticas de código e novas tecnologias que elevam a qualidade das aplicações.</p>
+                <p data-i18n-key="aboutEducation" class="invisible-init">Sou graduando em <strong>Gestão de Tecnologia da Informação</strong> pela Faculdade Uníntese e estou sempre me aperfeiçoando em <strong>UI/UX</strong>, boas práticas de código e novas tecnologias que elevam a qualidade das aplicações.</p>
           
-                <p data-i18n-key="aboutHobbies">Nos meus momentos livres, gosto de explorar novas linguagens, ferramentas e conceitos que ampliem minha visão sobre desenvolvimento web.</p>
+                <p data-i18n-key="aboutHobbies" class="invisible-init">Nos meus momentos livres, gosto de explorar novas linguagens, ferramentas e conceitos que ampliem minha visão sobre desenvolvimento web.</p>
           
-                <p data-i18n-key="aboutInvitation">Se você busca um desenvolvedor <strong>dedicado, analítico e criativo</strong> para transformar sua ideia em um produto digital sólido e de alto impacto — <strong>vamos conversar!</strong></p>
+                <p data-i18n-key="aboutInvitation" class="invisible-init">Se você busca um desenvolvedor <strong>dedicado, analítico e criativo</strong> para transformar sua ideia em um produto digital sólido e de alto impacto — <strong>vamos conversar!</strong></p>
               </div>
             </div>
         </section>        
 
         <section id="contact" class="panel contact">
-            <div class="contact-title">
+            <div class="contact-title invisible-init">
                 <h2 data-i18n-key="navContact">Contato</h2>
                 <p data-i18n-key="contactEmail">Email: <a class="email-link" href="mailto:wendellaraujodev@gmail.com">wendellaraujodev@gmail.com</a></p>
             </div>
-            <div class="social-links">
+            <div class="social-links invisible-init">
                 <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon github"><i class="fab fa-github"></i><span class="icon-text">GitHub</span></a>
                 <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i><span class="icon-text">LinkedIn</span></a>
                 <a href="https://www.instagram.com/wendellaraujodev/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i><span class="icon-text">Instagram</span></a>
@@ -130,9 +134,9 @@
         </section>
         
         <section id="skills" class="panel skills">
-            <h2 data-i18n-key="navSkills">Habilidades</h2>
-            <p data-i18n-key="skillsText">Estas são algumas das tecnologias com as quais tenho experiência:</p>
-            <div class="skills-container">
+            <h2 data-i18n-key="navSkills" class="invisible-init">Habilidades</h2>
+            <p data-i18n-key="skillsText" class="invisible-init">Estas são algumas das tecnologias com as quais tenho experiência:</p>
+            <div class="skills-container invisible-init">
                 <div class="skill-item">
                     <i class="fab fa-html5"></i>
                     <span>HTML5</span>
@@ -142,7 +146,7 @@
                     <span>CSS3</span>
                 </div>
                 <div class="skill-item">
-                    <i class="fab fa-js"></i>
+                    <i class="fab fa-square-js"></i>
                     <span>JavaScript</span>
                 </div>
                 <div class="skill-item">
@@ -169,18 +173,18 @@
         </section>
 
         <section id="projects" class="panel projects">
-            <div class="projects-title">
+            <div class="projects-title invisible-init">
                 <h2 data-i18n-key="projectsTitle">Projetos em Destaque</h2>
                 <p data-i18n-key="projectsText">Estes são alguns dos meus principais trabalhos. Clique para ver os detalhes.</p>
             </div>
-            <div class="project-showcase-container"></div>
-            <a href="projects.html" class="button view-more-button" data-i18n-key="viewMoreProjects">Ver mais projetos</a>
+            <div class="project-showcase-container invisible-init"></div>
+            <a href="projects.html" class="button view-more-button invisible-init" data-i18n-key="viewMoreProjects">Ver mais projetos</a>
         </section>
 
         <section id="instagram" class="panel">
-            <h2 data-i18n-key="instagramTitle">Últimas no Instagram</h2>
-            <div data-behold-id="pILaqSHhhD2NBqLWYvmh"></div>
-            <a href="https://www.instagram.com/wendellaraujodev/" target="_blank" class="button instagram-follow-button">
+            <h2 data-i18n-key="instagramTitle" class="invisible-init">Últimas no Instagram</h2>
+            <div data-behold-id="pILaqSHhhD2NBqLWYvmh" class="instagram-feed-container invisible-init"></div>
+            <a href="https://www.instagram.com/wendellaraujodev/" target="_blank" class="button instagram-follow-button invisible-init">
                 <i class="fab fa-instagram"></i>
                 <span data-i18n-key="instagramFollow">Siga-me no Instagram</span>
             </a>
@@ -194,7 +198,7 @@
 
         <div id="projectModal" class="modal">
             <div class="modal-content">
-                <button class="close" onclick="closeModal()"><i class="fas fa-square-xmark"></i></button>
+                <button class="close" onclick="closeModal()"><i class="fas fa-xmark"></i></button>
                 <div class="modal-gallery-container">
                     <div class="gallery-loader"><i class="fas fa-spinner fa-spin"></i></div>
                     <button id="modal-prev" class="modal-nav-button" onclick="showPrevImage()"><i class="fas fa-chevron-left"></i></button>
