@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const loaderAnimation = () => {
     const tl = anime.timeline({
-      easing: "easeOutExpo",
+      easing: "linear",
       duration: 750,
     });
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         height: ["100%", "0%"],
         opacity: [1, 0],
         duration: 800,
-        easing: "easeInOutQuart",
+        easing: "linear",
         complete: function () {
           document.getElementById("loader").style.display = "none";
           document.body.classList.remove("loading");
@@ -96,7 +96,7 @@ function initScrollReveal() {
           translateY: [20, 0],
           opacity: [0, 1],
           duration: 1000,
-          easing: "easeOutExpo",
+          easing: "linear",
           delay: anime.stagger(150),
         });
 
@@ -182,7 +182,7 @@ if (themeToggle) {
       translateX: [0, 20],
       opacity: [1, 0],
       duration: 200,
-      easing: "easeInQuad",
+      easing: "linear",
       complete: function () {
         body.classList.toggle("light-mode");
         updateMetaThemeColor();
@@ -206,7 +206,7 @@ if (themeToggle) {
           translateX: [-20, 0],
           opacity: [0, 1],
           duration: 300,
-          easing: "easeOutBack",
+          easing: "linear",
           complete: function () {
             activeIcon.style.transform = "";
             activeIcon.style.opacity = "";
@@ -675,7 +675,7 @@ function setupProjectsAnimation() {
           return index % 2 === 0 ? [1500, 0] : [-1500, 0];
         },
 
-        easing: "easeOutExpo",
+        easing: "linear",
         duration: 800,
         delay: anime.stagger(200) 
       });
@@ -810,7 +810,7 @@ function openModal(projectKey, showGitHubLink = true, showOnlineLink = true) {
   });
 
   const tl = anime.timeline({
-    easing: "easeOutExpo",
+    easing: "linear",
     duration: 500,
   });
 
@@ -840,7 +840,7 @@ function openModal(projectKey, showGitHubLink = true, showOnlineLink = true) {
         translateY: [20, 0],
         opacity: [0, 1],
         delay: anime.stagger(100),
-        easing: "easeOutQuad",
+        easing: "linear",
       },
       "-=800"
     );
@@ -852,7 +852,7 @@ function closeModal() {
   document.removeEventListener("keydown", handleKeydown);
 
   const tl = anime.timeline({
-    easing: "easeInQuad",
+    easing: "linear",
     duration: 300,
     complete: function () {
       modal.classList.remove("show");
@@ -907,7 +907,7 @@ function animateGallerySwitch(direction) {
     targets: imgElement,
     translateX: [0, moveOutTo],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: "linear",
     duration: 200,
     complete: function () {
       if (direction === "next") {
@@ -934,7 +934,7 @@ function animateGallerySwitch(direction) {
           targets: imgElement,
           translateX: [moveInFrom, 0],
           opacity: [0, 1],
-          easing: "easeOutQuad",
+          easing: "linear",
           duration: 300,
         });
       };
@@ -987,7 +987,7 @@ function toggleMenu() {
       translateX: [50, 0],
       opacity: [0, 1],
       delay: anime.stagger(100, { start: 100 }),
-      easing: "easeOutBack",
+      easing: "linear",
       duration: 600,
     });
   } else {
@@ -998,7 +998,7 @@ function toggleMenu() {
       opacity: 0,
       translateX: 20,
       duration: 300,
-      easing: "easeInQuad",
+      easing: "linear",
       complete: () => {
         menu.classList.remove("active");
         isMenuAnimating = false;
@@ -1115,7 +1115,7 @@ async function setLanguage(lang, animate = false) {
 
   if (animate && flagIcon) {
     const tl = anime.timeline({
-      easing: "easeInQuad",
+      easing: "linear",
       duration: 200,
     });
 
@@ -1148,14 +1148,14 @@ async function setLanguage(lang, animate = false) {
         translateX: [-20, 0],
         opacity: [0, 1],
         duration: 300,
-        easing: "easeOutBack",
+        easing: "linear",
       })
       .add({
         targets: "main",
         opacity: [0.5, 1],
         filter: ["blur(2px)", "blur(0px)"],
         duration: 300,
-        easing: "easeOutQuad",
+        easing: "linear",
         offset: "-=300",
       });
   } else {
@@ -1188,7 +1188,7 @@ function setupLanguageDropdown() {
       opacity: [0, 1],
       scale: [0.8, 1],
       duration: 300,
-      easing: "easeOutBack",
+      easing: "linear",
     });
 
     anime.set(langOptions, {
@@ -1201,7 +1201,7 @@ function setupLanguageDropdown() {
       opacity: [0, 1],
       translateX: [20, 0],
       delay: anime.stagger(80, { start: 100 }),
-      easing: "easeOutBack",
+      easing: "linear",
       duration: 500,
       complete: () => {
         isAnimating = false;
@@ -1220,7 +1220,7 @@ function setupLanguageDropdown() {
       opacity: 0,
       translateX: 10,
       duration: 200,
-      easing: "easeInQuad",
+      easing: "linear",
     });
 
     anime({
@@ -1228,7 +1228,7 @@ function setupLanguageDropdown() {
       opacity: 0,
       scale: 0.9,
       duration: 200,
-      easing: "easeInQuad",
+      easing: "linear",
       delay: 100,
       complete: () => {
         dropdown.style.display = "none";
